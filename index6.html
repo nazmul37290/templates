@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template 6</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .font-poppins{
+            font-family: "Poppins", system-ui;
+        }
+        .font-lato{
+            font-family: "Lato", system-ui;
+        }
+      .swiper {
+        width: 100%;
+        
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .button-next,.button-prev{
+        height: 50px;
+        width: 50px;
+        color: white;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+        background-color: #14b8a6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border: 1px solid #14b8a6;
+       
+        
+        
+      }
+      .benifit-card:hover h3,
+      .benifit-card:hover p {
+        color: #fff;
+      }
+      .bg-image {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.666)
+          ),
+          url("images/akhrot.jpg");
+      }
+      .active{
+        color: #14b8a6;
+      }
+      .swiper-pagination-bullet-active{
+        background: #14b8a6!important;
+      }
+      .featured-section{
+        background-image: url("images/noise-bg-2.png");
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <header>
+        <!-- upper header -->
+         <section class="bg-teal-500 lg:h-10 ">
+            <div class="max-w-screen-2xl flex flex-col lg:flex-row items-center h-full justify-between mx-auto">
+                <p class="text-sm lg:text-base text-white font-lato">Special Discount on Mens Clothing up to 30%</p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+         
+         </section>
+         <!--main header -->
+         <section>
+            <div class="max-w-screen-2xl mx-auto py-8 flex flex-col lg:flex-row items-center gap-10 ">
+                <!-- brand logo  -->
+                <div class="h-10 w-fit">
+                    <img src="images/wood-logo-dark.svg" class="h-full w-full" alt="">
+                </div>
+                <!-- search bar -->
+                <div class="relative flex-1">
+
+                    <input type="search" class="border border-gray-300 rounded-sm w-full  focus:outline-none p-3" placeholder="search for products">
+                    <i class="fa-solid fa-magnifying-glass text-teal-500 text-lg top-1/2 -translate-y-1/2 absolute right-4"></i>
+                </div>
+                <div class="flex items-center gap-6 text-xl">
+                    <a href="#" class="uppercase font-lato font-bold text-base">Login / Register</a>
+                    <a href="#" class="relative">
+                        <div class="absolute -right-2 -top-1 bg-teal-500 text-white text-sm  h-4 flex items-center justify-center w-4 rounded-full">0</div>
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="#" class="relative">
+                        <div class="absolute -right-2 -top-1 bg-teal-500 text-white text-sm  h-4 flex items-center justify-center w-4 rounded-full">0</div>
+
+                        <i class="fa-solid fa-code-compare"></i>
+                    </a>
+                    <a href="#" class="relative">
+                        <div class="absolute -right-2 -top-1 bg-teal-500 text-white text-sm  h-4 flex items-center justify-center w-4 rounded-full">0</div>
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+
+                </div>
+            </div>
+            <nav class="border-y border-gray-300 py-4">
+                <div class="max-w-screen-2xl mx-auto flex justify-between text-sm gap-5">
+                    <div class="flex text-sm gap-5">
+
+                        <a href="#" class="font-lato active font-bold uppercase">Home</a>
+                        <a href="#" class="font-lato font-bold uppercase">Shop</a>
+                        <a href="#" class="font-lato font-bold uppercase">Categories</a>
+                        <a href="#" class="font-lato font-bold uppercase">About us</a>
+                        <a href="#" class="font-lato font-bold uppercase">Contact us</a>
+                    </div>
+                    <div class="text-sm">
+                        <a href="#" class="font-lato active font-bold uppercase">Special Offers</a>
+
+                    </div>
+                </div>
+            </nav>
+         </section>
+    </header>
+    <main>
+        <!-- carousel slider -->
+         <section>
+            <div class="swiper mySwiper h-[700px]">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide shadow-md "
+                  >
+                    <img
+                      class="shadow-md lg:object-[0,-350px]"
+                      src="images/furniture/f1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="swiper-slide shadow-md "
+                  >
+                    <img
+                      class="shadow-md lg:object-[0,-380px]"
+                      src="images/furniture/f2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="swiper-slide shadow-md "
+                  >
+                    <img
+                      class="shadow-md lg:object-bottom"
+                      src="images/furniture/f3.jpg"
+                      alt=""
+                    />
+                  </div>
+                 
+                </div>
+                <div class="flex gap-5 flex-row-reverse  absolute z-[99] bottom-10 right-10">
+
+                  <div class="button-next"><i class="fa-solid fa-arrow-right"></i></div>
+                  <div class="button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+         </section>
+         <!-- Categories section -->
+          <section class="max-w-screen-2xl mx-auto my-24">
+
+            <div class="grid grid-cols-12 grid-rows-12 gap-5 h-[70vh]">
+              <div class="relative bg-gray-300 w-full  h-full col-span-5 row-span-12 overflow-hidden">
+                <img src="images/furniture/c4.jpg" class="hover:scale-110 hover:rotate transition-all duration-500 ease-in-out w-full h-full object-cover" alt="">
+                <button class="absolute bottom-10 text-white bg-teal-500 uppercase font-bold text-xl px-10 py-3">Dining</button>
+              </div>
+              <div class="bg-gray-300 w-full  h-full col-span-4 row-span-6 overflow-hidden">
+                <img src="images/furniture/c2.jpg" class="hover:scale-110 hover:rotate transition-all duration-500 ease-in-out w-full h-full object-cover" alt="">
+              </div>
+              <div class="bg-gray-300 w-full  h-full col-span-3 row-span-12 overflow-hidden">
+                <img src="images/furniture/c1.jpg" class="hover:scale-110 hover:rotate transition-all duration-500 ease-in-out w-full h-full object-cover" alt="">
+              </div>
+              <div class="bg-gray-300 w-full  h-full col-span-4 row-span-6 overflow-hidden">
+                <img src="images/furniture/c3.jpg" class="hover:scale-110 hover:rotate transition-all duration-500 ease-in-out w-full h-full object-cover" alt="">
+              </div>
+              
+            </div>
+          </section>
+
+         <!-- featured products section -->
+          <section class="featured-section my-24">
+            <div class="max-w-screen-2xl mx-auto py-20">
+              <div class="section-heading mb-10">
+                <h3 class="uppercase text-white font-poppins text-sm tracking-[2px] text-center font-light">WOoden accessories</h3>
+                <h1 class="uppercase font-extrabold text-[#343434] mt-4  font-lato text-2xl text-center tracking-[2px]">Featured Products</h1>
+                <p class="text- text-center  tracking-[2px]">You can find your best choices here, Grab it now !!</p>
+              </div>
+              <!-- products container-->
+               <div class="grid grid-cols-4 gap-10">
+  
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded  flex items-center justify-center">
+                    <span class=" absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/couch.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider line-clamp-2 leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded flex items-center justify-center">
+                    <span class=" absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/couch-blue.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded flex items-center justify-center">
+                    <span class="absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/sofa.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded flex items-center justify-center">
+                    <span class=" absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/sofa-fainting.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded  flex items-center justify-center">
+                    <span class=" absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/dining-table.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider line-clamp-2 leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded flex items-center justify-center">
+                    <span class=" absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/couch-blue.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded flex items-center justify-center">
+                    <span class="absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/sofa.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+                <!-- product card -->
+                <div class="relative h-[450px] w-full bg-white border-t border-gray-100 shadow-lg  rounded-md">
+                  <div class="relative h-56  rounded flex items-center justify-center">
+                    <span class=" absolute right-4 top-3">
+                      <i title="add to wishlist" class="wishlist-button fa-regular fa-heart text-teal-500 text-2xl cursor-pointer"></i>
+                    </span>
+                    <!-- image will be here -->
+                     <div class="h-[100px] absolute w-full z-10  bg-gray-100 "></div>
+                     <img src="images/furniture/products/sofa-fainting.png" class="absolute z-20  max-w-72 max-h-48" alt="">
+                  </div>
+                  <!-- product details -->
+                  <div class="px-4 mt-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex text-teal-500 items-center gap-1 mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i> 
+                        <p class="text-gray-400 text-sm">(21)</p>
+                      </div>
+                      
+                      <p class="bg-teal-500 rounded-3xl px-4 pt-1 pb-2 text-sm  w-fit lowercase text-white">New</p>
+                    </div>
+                    <h1 class=" text-lg  font-semibold font-poppins mt-4 text-[#343434] tracking-wider leading-[22px]">Premium wooden couch with leather finish</h1>
+                    <h3 class="text-teal-500 font-lato text-3xl font-bold mt-2 mb-12">$510</h3>
+                  </div>
+                  <!-- product actions -->
+                  <div class= "absolute w-full bottom-0 cursor-pointer hover:bg-teal-500 transition-all duration-100 ease-linear bg-teal-800 h-10 text-center text-white font-semibold uppercase text-sm flex items-center justify-center">
+                   Add to Cart
+                  </div>
+                </div>
+               </div>
+            </div>
+          </section>
+    </main>
+
+
+
+    <!-- scripts -->
+     <!-- custom scripts -->
+      <script>
+        const wishlistButtons = document.querySelectorAll('.wishlist-button');
+        for(const btn of wishlistButtons){
+          btn.addEventListener('click', function(){
+            btn.classList.toggle('font-bold');
+          });
+        }
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+        loop: true,
+        // breakpoints: {
+        //   480: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 40,
+        //   },
+        //   768: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 50,
+        //   },
+        // },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
